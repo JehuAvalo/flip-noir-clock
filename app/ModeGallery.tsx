@@ -1,5 +1,6 @@
 "use client";
 import { useEffect,useRef,useState } from "react";
+import {CanvasFlip} from "./CanvasFlip";
 const pad=(n:number)=>String(n).padStart(2,"0");
 const modes=["Flip","Digital","Analog","Hybrid","Minimal Dark","Minimal Light","Aurora","OLED"] as const;
 type ModeName=typeof modes[number];
@@ -17,7 +18,7 @@ export function ModeGallery(){
  </section>
 }
 function renderMode(mode:ModeName,h:string,m:string,s:string){switch(mode){
- case"Flip":return <div className="miniFlip"><Card v={h}/><Card v={m}/></div>;
+ case"Flip":return <CanvasFlip hour={h} minute={m}/>;
  case"Digital":return <><div className="digitalTime"><span>{h}:{m}</span><small>:{s}</small></div><DateLine/></>;
  case"Analog":return <Analog h={+h} m={+m} s={+s}/>;
  case"Hybrid":return <div className="hybrid"><Analog h={+h} m={+m} s={+s}/><div><div className="hybridTime">{h}:{m}</div><DateLine/></div></div>;
