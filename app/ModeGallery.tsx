@@ -7,12 +7,13 @@ const notes:Record<ModeName,string>={Flip:"La firma de Flip Noir",Digital:"Direc
 const classes:Record<ModeName,string>={Flip:"modeFlip",Digital:"modeDigital",Analog:"modeAnalog",Hybrid:"modeHybrid","Minimal Dark":"modeDark","Minimal Light":"modeLight",Aurora:"modeAurora",OLED:"modeOled"};
 
 export function ModeGallery(){
- const[now,setNow]=useState<Date|null>(null);const[selected,setSelected]=useState<ModeName>("Flip");
+ const[now,setNow]=useState<Date|null>(null);const[selected,setSelected]=useState<ModeName>("Flip");const[demoOffset,setDemoOffset]=useState(0);
  useEffect(()=>{setNow(new Date());const id=setInterval(()=>setNow(new Date()),1000);return()=>clearInterval(id)},[]);
- const h=pad(now?.getHours()??22),m=pad(now?.getMinutes()??48),s=pad(now?.getSeconds()??0);
+ const shown=now?new Date(now.getTime()+demoOffset*60000):null;const h=pad(shown?.getHours()??22),m=pad(shown?.getMinutes()??48),s=pad(shown?.getSeconds()??0);
+ const replayFlip=()=>{setDemoOffset(1);window.setTimeout(()=>setDemoOffset(0),1600)};
  return <section className={`modeSwitcher ${classes[selected]}`} aria-label="Explorar modos de Flip Noir">
   <div className="modeTabs" role="tablist" aria-label="Modos de reloj">{modes.map(mode=><button key={mode} role="tab" aria-selected={selected===mode} onClick={()=>setSelected(mode)}>{mode}</button>)}</div>
-  <div className="activeMode"><div className="activeModeLabel"><span>{selected}</span><p>{notes[selected]}</p></div><div className="modeContent">{renderMode(selected,h,m,s)}</div></div>
+  <div className="activeMode"><div className="activeModeLabel"><span>{selected}</span><p>{notes[selected]}</p>{selected==="Flip"&&<button className="replayFlip" onClick={replayFlip}>Reproducir transición</button>}</div><div className="modeContent">{renderMode(selected,h,m,s)}</div></div>
  </section>
 }
 function renderMode(mode:ModeName,h:string,m:string,s:string){switch(mode){
