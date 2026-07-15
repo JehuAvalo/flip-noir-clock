@@ -6,6 +6,8 @@
   const note = switcher?.querySelector(".activeModeLabel p");
   const tabs = [...(switcher?.querySelectorAll(".modeTabs button") ?? [])];
 
+  if (!switcher || !content || !label || !note || tabs.length === 0) return;
+
   const details = {
     Flip: ["modeFlip", "La firma de Flip Noir"],
     Digital: ["modeDigital", "Directo, grueso y redondeado"],
