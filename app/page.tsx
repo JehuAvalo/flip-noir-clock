@@ -17,7 +17,7 @@ export default function Home() {
       <p className="eyebrow">Protector de pantalla para Windows</p>
       <h1>El tiempo,<br/>sin ruido.</h1>
       <p className="heroCopy">Flip Noir convierte cualquier pantalla en una presencia serena. Relojes minimalistas, movimiento preciso y cero distracciones.</p>
-      <div className="actions"><a className="button primary" href={download} download>Descargar para Windows</a><a className="button secondary" href="#design">Ver en acción</a></div>
+      <div className="actions"><a className="button primary" href={download} download>Descargar para Windows</a></div>
       <p className="requirements">Versión 1.0.0&nbsp;&nbsp;·&nbsp;&nbsp;Windows 10 y 11&nbsp;&nbsp;·&nbsp;&nbsp;64 bits</p>
     </section>
 
