@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { FlipDemo } from "./FlipDemo";
+import { ModeGallery } from "./ModeGallery";
 
 export const metadata: Metadata = {
   title: "Flip Noir — Protector de pantalla minimalista para Windows",
@@ -10,7 +11,7 @@ const download = "/downloads/FlipNoir-1.0.0-win-x64.zip";
 
 export default function Home() {
   return <main>
-    <nav className="nav shell"><a className="brand" href="#top" aria-label="Flip Noir, inicio"><span className="brandMark">FN</span><span>Flip Noir</span></a><div className="navLinks"><a href="#features">Funciones</a><a href="#design">Diseño</a><a className="navDownload" href={download} download>Descargar</a></div></nav>
+    <nav className="nav shell"><a className="brand" href="#top" aria-label="Flip Noir, inicio"><span className="brandMark">FN</span><span>Flip Noir</span></a><div className="navLinks"><a href="#modes">Modos</a><a href="#features">Funciones</a><a className="navDownload" href={download} download>Descargar</a></div></nav>
 
     <section className="hero shell" id="top">
       <p className="eyebrow">Protector de pantalla para Windows</p>
@@ -34,7 +35,8 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="modes shell"><p className="eyebrow">Una presencia. Varias expresiones.</p><div className="modeList"><div><b>Flip</b><span>El icono de Flip Noir.</span></div><div><b>Digital</b><span>Tipografías limpias y redondeadas.</span></div><div><b>Analog</b><span>Una esfera sobria y atemporal.</span></div><div><b>OLED</b><span>Negro puro. Consumo mínimo.</span></div></div></section>
+    <section className="modesIntro shell" id="modes"><p className="eyebrow">Todos los modos</p><h2>Una presencia.<br/>Ocho expresiones.</h2><p>Desplázate para ver cada reloj y cada tema ocupando la pantalla completa.</p></section>
+    <ModeGallery/>
 
     <section className="downloadSection shell"><p className="eyebrow">Disponible ahora</p><h2>Haz que el reposo<br/>se vea mejor.</h2><a className="button primary large" href={download} download>Descargar Flip Noir</a><p>Para Windows 10/11. Requiere .NET 8 Desktop Runtime.</p></section>
 
