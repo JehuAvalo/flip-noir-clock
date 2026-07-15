@@ -10,6 +10,7 @@ const classes:Record<ModeName,string>={Flip:"modeFlip",Digital:"modeDigital",Ana
 export function ModeGallery(){
  const[now,setNow]=useState<Date|null>(null);const[selected,setSelected]=useState<ModeName>("Flip");const[demoOffset,setDemoOffset]=useState(0);
  useEffect(()=>{setNow(new Date());const id=setInterval(()=>setNow(new Date()),1000);return()=>clearInterval(id)},[]);
+ useEffect(()=>{if(selected!=="Flip"){setDemoOffset(0);return}const id=window.setInterval(()=>setDemoOffset(value=>value===0?1:0),4000);return()=>window.clearInterval(id)},[selected]);
  const shown=now?new Date(now.getTime()+demoOffset*60000):null;const h=pad(shown?.getHours()??22),m=pad(shown?.getMinutes()??48),s=pad(shown?.getSeconds()??0);
  const replayFlip=()=>{setDemoOffset(1);window.setTimeout(()=>setDemoOffset(0),1600)};
  return <section className={`modeSwitcher ${classes[selected]}`} aria-label="Explorar modos de Flip Noir">
