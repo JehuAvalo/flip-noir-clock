@@ -34,3 +34,4 @@
 .canvasFlip{display:block;width:min(82vw,1100px);height:min(72vh,680px)}@media(max-width:760px){.canvasFlip{width:94vw;height:60vh}}
 .staticFlipWrap{display:flex;flex-direction:column;align-items:center;gap:30px;width:100%}.staticFlipCard{box-shadow:0 35px 80px #000}.flipExplanation{max-width:640px;margin:0;padding:0 24px;text-align:center;color:#858585;font-size:15px;line-height:1.65}
 .features .sectionHead{position:relative;display:block}.features .sectionHead>p{position:absolute;left:0;top:10px;margin:0}.features .sectionHead h2{max-width:920px;margin:0 auto;text-align:center}@media(max-width:760px){.features .sectionHead>p{position:static}.features .sectionHead h2{margin-top:30px;text-align:center}}
+.features .sectionHead{position:static;display:block}.features .sectionHead>p{position:static;margin:0}.features .sectionHead h2{max-width:1000px;margin:32px 0 0;text-align:left}@media(max-width:760px){.features .sectionHead h2{margin-top:30px;text-align:left}}
