@@ -36,7 +36,7 @@ export default function Home() {
 
     <section className="modes shell"><p className="eyebrow">Una presencia. Varias expresiones.</p><div className="modeList"><div><b>Flip</b><span>El icono de Flip Noir.</span></div><div><b>Digital</b><span>Tipografías limpias y redondeadas.</span></div><div><b>Analog</b><span>Una esfera sobria y atemporal.</span></div><div><b>OLED</b><span>Negro puro. Consumo mínimo.</span></div></div></section>
 
-    <section className="downloadSection shell"><p className="eyebrow">Disponible ahora</p><h2>Haz que el reposo<br/>se vea mejor.</h2><a className="button primary large" href={download} download>Descargar Flip Noir</a><p>Descarga autocontenida. No requiere instalar .NET.</p></section>
+    <section className="downloadSection shell"><p className="eyebrow">Disponible ahora</p><h2>Haz que el reposo<br/>se vea mejor.</h2><a className="button primary large" href={download} download>Descargar Flip Noir</a><p>Para Windows 10/11. Requiere .NET 8 Desktop Runtime.</p></section>
 
     <footer className="footer shell"><div className="brand"><span className="brandMark">FN</span><span>Flip Noir</span></div><p>Diseñado por JehúDev.</p><p>© 2026 Flip Noir</p></footer>
   </main>;
