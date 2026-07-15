@@ -3,7 +3,7 @@ import { useEffect,useRef,useState } from "react";
 const pad=(n:number)=>String(n).padStart(2,"0");
 const modes=["Flip","Digital","Analog","Hybrid","Minimal Dark","Minimal Light","Aurora","OLED"] as const;
 type ModeName=typeof modes[number];
-const notes:Record<ModeName,string>={Flip:"La firma de Flip Noir",Digital:"Directo, grueso y redondeado",Analog:"Sobrio y atemporal",Hybrid:"Dos lecturas, una composición","Minimal Dark":"Contraste preciso","Minimal Light":"Calma a plena luz",Aurora:"Color ambiental en movimiento",OLED:"Negro puro. Solo lo esencial."};
+const notes:Record<ModeName,string>={Flip:"",Digital:"Directo, grueso y redondeado",Analog:"Sobrio y atemporal",Hybrid:"Dos lecturas, una composición","Minimal Dark":"Contraste preciso","Minimal Light":"Calma a plena luz",Aurora:"Color ambiental en movimiento",OLED:"Negro puro. Solo lo esencial."};
 const classes:Record<ModeName,string>={Flip:"modeFlip",Digital:"modeDigital",Analog:"modeAnalog",Hybrid:"modeHybrid","Minimal Dark":"modeDark","Minimal Light":"modeLight",Aurora:"modeAurora",OLED:"modeOled"};
 
 export function ModeGallery(){

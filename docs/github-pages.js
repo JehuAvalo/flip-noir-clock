@@ -9,7 +9,7 @@
   if (!switcher || !content || !label || !note || tabs.length === 0) return;
 
   const details = {
-    Flip: ["modeFlip", "La firma de Flip Noir"],
+    Flip: ["modeFlip", ""],
     Digital: ["modeDigital", "Directo, grueso y redondeado"],
     Analog: ["modeAnalog", "Sobrio y atemporal"],
     Hybrid: ["modeHybrid", "Dos lecturas, una composición"],

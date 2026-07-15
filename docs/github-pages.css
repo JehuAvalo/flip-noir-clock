@@ -14,29 +14,28 @@
     left: 50%;
     right: auto;
     transform: translateX(-50%);
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
     width: calc(100% - 28px);
     max-width: 620px;
-    border-radius: 24px;
-    overflow: visible;
+    border-radius: 999px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 14px;
   }
   .modeTabs button {
-    min-width: 0;
-    padding: 9px 5px;
-    font-size: 9px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex: 0 0 auto;
+    min-width: max-content;
+    padding: 9px 13px;
+    font-size: 10px;
+    scroll-snap-align: center;
   }
-  .activeMode .modeContent { padding-top: 128px; }
+  .activeMode .modeContent { padding-top: 96px; }
   .activeModeLabel {
     left: 18px;
     right: 18px;
     bottom: max(22px, env(safe-area-inset-bottom));
   }
-}
-@media (max-width: 390px) {
-  .modeTabs { grid-template-columns: repeat(2, minmax(0, 1fr)); border-radius: 22px; }
-  .modeTabs button { font-size: 10px; }
-  .activeMode .modeContent { padding-top: 210px; }
+  .activeModeLabel p:empty { display: none; }
 }
