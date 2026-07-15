@@ -40,6 +40,6 @@ export default function Home() {
 
     <section className="downloadSection shell"><p className="eyebrow">Disponible ahora</p><h2>Haz que el reposo<br/>se vea mejor.</h2><a className="button primary large" href={download} download>Descargar Flip Noir</a><p>Para Windows 10/11. Requiere .NET 8 Desktop Runtime.</p></section>
 
-    <footer className="footer shell"><div className="brand"><span className="brandMark">FN</span><span>Flip Noir</span></div><p>Diseñado por JehúDev.</p><p>© 2026 Flip Noir</p></footer>
+    <footer className="footer shell"><div className="brand" aria-label="JehuDev"><span className="brandMark">&lt;JA&gt;</span><span>JehuDev</span></div><p>Diseñado por JehuDev.</p><p>© 2026 Flip Noir</p></footer>
   </main>;
 }
