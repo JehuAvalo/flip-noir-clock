@@ -38,8 +38,9 @@
     bottom: max(22px, env(safe-area-inset-bottom));
   }
   .activeModeLabel p:empty { display: none; }
+  .activeMode .modeContent { padding-left: 16px; padding-right: 16px; }
   .staticFlipWrap, .miniFlip { margin-inline: auto; }
-  .miniFlip { justify-content: center; }
+  .miniFlip { width: 100%; max-width: 720px; justify-content: center; }
   .hybrid { width: 100%; text-align: center; }
   .hybrid > div:last-child {
     width: 100%;
