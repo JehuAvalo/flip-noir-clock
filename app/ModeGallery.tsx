@@ -17,7 +17,7 @@ export function ModeGallery(){
  </section>
 }
 function renderMode(mode:ModeName,h:string,m:string,s:string){switch(mode){
- case"Flip":return <div className="miniFlip"><Card v={h}/><Card v={m}/></div>;
+ case"Flip":return <div className="miniFlip digitFlip"><div className="digitGroup"><Card v={h[0]}/><Card v={h[1]}/></div><div className="digitGroup"><Card v={m[0]}/><Card v={m[1]}/></div></div>;
  case"Digital":return <><div className="digitalTime"><span>{h}:{m}</span><small>:{s}</small></div><DateLine/></>;
  case"Analog":return <Analog h={+h} m={+m} s={+s}/>;
  case"Hybrid":return <div className="hybrid"><Analog h={+h} m={+m} s={+s}/><div><div className="hybridTime">{h}:{m}</div><DateLine/></div></div>;

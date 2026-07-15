@@ -24,3 +24,4 @@
 @media(prefers-reduced-motion:reduce){.liveFlipCard .flipTopLeaf,.liveFlipCard .flipBottomLeaf{animation:none;display:none}}
 @media(max-width:760px){.liveFlipCard .flipHalf b{font-size:28vw}}
 .replayFlip{margin-left:12px;border:1px solid #383838;border-radius:999px;background:#111;color:#fff;padding:8px 13px;font:500 11px var(--font-sans);cursor:pointer;transition:.2s}.replayFlip:hover{border-color:#fff;background:#fff;color:#000}.replayFlip:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.digitFlip{gap:clamp(16px,3vw,48px)}.digitGroup{display:flex;flex:1;gap:clamp(5px,.8vw,12px)}.digitGroup .miniCard{min-width:0}.digitGroup .miniCard b,.digitGroup .flipHalf b{font-size:clamp(90px,12.5vw,205px);letter-spacing:-.06em}@media(max-width:760px){.digitFlip{gap:10px}.digitGroup{gap:4px}.digitGroup .miniCard b,.digitGroup .flipHalf b{font-size:14vw}}
