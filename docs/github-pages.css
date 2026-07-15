@@ -38,4 +38,19 @@
     bottom: max(22px, env(safe-area-inset-bottom));
   }
   .activeModeLabel p:empty { display: none; }
+  .staticFlipWrap, .miniFlip { margin-inline: auto; }
+  .miniFlip { justify-content: center; }
+  .hybrid { width: 100%; text-align: center; }
+  .hybrid > div:last-child {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hybridTime, .hybrid .dateLine {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 }
